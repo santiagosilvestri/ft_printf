@@ -45,7 +45,7 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i + 1] == '\0')
-			return (-1);
+			return (va_end(args), -1);
 		if (format[i] == '%' && format[i + 1])
 		{
 			i++;
